@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>About — NEXORA | Our Story, Mission &amp; Values</title>
+  <meta name="description" content="Learn how NEXORA became a trusted name in premium electronics — our story, mission, vision, core values, and the achievements behind the brand." />
+  <meta name="keywords" content="NEXORA about, company story, mission, vision, values, achievements" />
+  <meta name="author" content="Chaitanya Nadipena" />
+  <meta name="theme-color" content="#000000" />
+
+  <meta property="og:title" content="About — NEXORA" />
+  <meta property="og:description" content="Our story, mission, vision, and the values behind NEXORA." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Cpath d='M28 72V28h9.6L61 56.4V28h9.6v44H61L37.6 43.4V72z' fill='%23fff'/%3E%3C/svg%3E" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <span class="loader__bracket">[</span>
+      <span class="loader__word">NEXORA</span>
+      <span class="loader__bracket">]</span>
+    </div>
+    <div class="loader__bar"><span class="loader__bar-fill" id="loaderFill"></span></div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="siteNav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo" aria-label="NEXORA home">
+        <span class="nav__logo-mark">N</span>
+        <span class="nav__logo-text">NEXORA</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="products.html" class="nav__link">Products</a>
+        <a href="about.html" class="nav__link is-active">About</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Open search" aria-expanded="false" aria-controls="searchPanel">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="icon-btn" id="cartToggle" aria-label="Open cart" aria-expanded="false" aria-controls="cartPanel">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3h2l.4 2M7 13h10l3-8H5.4M7 13 5.4 5M7 13l-1.7 6.6A1 1 0 0 0 6.3 21H18"/><circle cx="9" cy="21" r="1"/><circle cx="17" cy="21" r="1"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-panel" id="searchPanel">
+      <div class="container search-panel__inner">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="navSearchInput" placeholder="Search laptops, phones, watches, audio…" aria-label="Search products" />
+        <button class="icon-btn" id="searchClose" aria-label="Close search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <nav aria-label="Mobile Primary">
+      <a href="index.html" class="mobile-menu__link">Home</a>
+      <a href="products.html" class="mobile-menu__link">Products</a>
+      <a href="about.html" class="mobile-menu__link is-active">About</a>
+      <a href="contact.html" class="mobile-menu__link">Contact</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <p>Premium Tech. Minimal Experience.</p>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
+    <div class="cart-panel__head">
+      <h2>Your Cart</h2>
+      <button class="icon-btn" id="cartClose" aria-label="Close cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="cart-panel__items" id="cartItems">
+      <p class="cart-empty">Your cart is empty. Explore the <a href="products.html">catalog</a> to add something premium.</p>
+    </div>
+    <div class="cart-panel__footer">
+      <div class="cart-panel__total">
+        <span>Subtotal</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="btn btn--primary btn--block" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <main id="main">
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>About</span>
+        </div>
+        <p class="eyebrow">Our Story</p>
+        <h1>Built by people who couldn't find the store they wanted.</h1>
+        <p>NEXORA started as a frustration with cluttered electronics retail — too many options, too little curation. Here's what we built instead.</p>
+      </div>
+    </section>
+
+    <!-- ============ STORY ============ -->
+    <section class="section">
+      <div class="container story">
+        <div class="story__media reveal">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80" alt="NEXORA product design studio with electronics on a workbench" loading="lazy" />
+        </div>
+        <div class="story__text reveal">
+          <p class="eyebrow">How We Started</p>
+          <h2 class="section__title">A store built on restraint</h2>
+          <p>NEXORA was founded in 2019 by a small team of hardware engineers and retail designers who shared one belief: most electronics stores sell too much and curate too little. Endless scrolling through thousands of near-identical products doesn't help anyone make a good decision.</p>
+          <p>So we built the opposite. Every device in the NEXORA catalog is tested, compared against its category's best alternatives, and only listed if it earns its place. We'd rather stock 120 exceptional products than 12,000 average ones — and we've held that line since our very first shipment.</p>
+          <p>Today, NEXORA ships to more than 15 countries, but the standard hasn't changed: if our own team wouldn't buy it, we don't sell it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MISSION & VISION ============ -->
+    <section class="section section--muted">
+      <div class="container">
+        <div class="mv-grid">
+          <div class="mv-card reveal">
+            <div class="feature-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="M3 12l9 5 9-5M3 17l9 5 9-5"/></svg>
+            </div>
+            <p class="eyebrow">Mission</p>
+            <h3>Make premium technology easy to choose, not just easy to buy.</h3>
+            <p>We exist to remove decision fatigue from electronics shopping — through rigorous curation, honest specs, and a catalog that respects your time.</p>
+          </div>
+          <div class="mv-card reveal">
+            <div class="feature-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/></svg>
+            </div>
+            <p class="eyebrow">Vision</p>
+            <h3>A world where "premium" means considered, not just expensive.</h3>
+            <p>We want NEXORA to be the benchmark for what a modern electronics retailer should feel like — precise, transparent, and built around the customer's actual needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CORE VALUES ============ -->
+    <section class="section" id="values">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">What Guides Us</p>
+          <h2 class="section__title">Our core values</h2>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            </div>
+            <h3>Curation over volume</h3>
+            <p>Every product earns its listing through hands-on testing. If it isn't genuinely excellent in its category, it doesn't make the catalog.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20"/></svg>
+            </div>
+            <h3>Radical transparency</h3>
+            <p>Specs, pricing, and warranty terms are written in plain language, with no fine print designed to confuse.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+            </div>
+            <h3>Long-term trust</h3>
+            <p>We measure success by repeat customers, not one-time sales — which is why our warranty and returns policy is unusually generous.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </div>
+            <h3>Considered design</h3>
+            <p>From packaging to our website, every detail is designed with the same restraint we expect from the products we sell.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="section section--muted">
+      <div class="container why-us">
+        <div class="why-us__text reveal">
+          <p class="eyebrow">Why Choose Us</p>
+          <h2 class="section__title">The difference shows up after checkout</h2>
+          <p>Anyone can sell a laptop. What makes NEXORA different is everything that happens after the order confirmation — verified authenticity, fast and tracked delivery, and a support team that actually resolves things.</p>
+          <ul class="why-us__list">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg> Every device hand-checked before it ships</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg> Two-year premium warranty on every category</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg> Support responses averaging under four hours</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg> 14-day no-questions-asked returns</li>
+          </ul>
+          <a href="products.html" class="btn btn--primary">Explore the Catalog</a>
+        </div>
+        <div class="why-us__media reveal">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="NEXORA quality control technician inspecting a device" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS ============ -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <span class="stat__num" data-count="120">0</span><span class="stat__suffix">+</span>
+          <p>Curated products</p>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="48">0</span><span class="stat__suffix">K</span>
+          <p>Happy customers</p>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="7">0</span><span class="stat__suffix"></span>
+          <p>Years in business</p>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="15">0</span><span class="stat__suffix">+</span>
+          <p>Countries served</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Recognition</p>
+          <h2 class="section__title">Milestones along the way</h2>
+        </div>
+
+        <div class="milestone-list">
+          <div class="milestone reveal">
+            <span class="milestone__year">2019</span>
+            <div>
+              <h3>NEXORA founded</h3>
+              <p>Launched with a 40-product catalog focused entirely on laptops and audio.</p>
+            </div>
+          </div>
+          <div class="milestone reveal">
+            <span class="milestone__year">2021</span>
+            <div>
+              <h3>Named "Retailer to Watch"</h3>
+              <p>Recognized by a leading consumer tech publication for our curation model.</p>
+            </div>
+          </div>
+          <div class="milestone reveal">
+            <span class="milestone__year">2023</span>
+            <div>
+              <h3>Crossed 30,000 customers</h3>
+              <p>Expanded into wearables, gaming accessories, and cameras based on customer demand.</p>
+            </div>
+          </div>
+          <div class="milestone reveal">
+            <span class="milestone__year">2026</span>
+            <div>
+              <h3>15-country delivery network</h3>
+              <p>Reached 48,000+ customers with a 99% on-time delivery record across our express network.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="icon-btn modal-close" id="modalClose" aria-label="Close product details">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="product-modal__body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo">
+          <span class="nav__logo-mark">N</span>
+          <span class="nav__logo-text">NEXORA</span>
+        </a>
+        <p>Premium Tech. Minimal Experience.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="NEXORA on Instagram" class="icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="NEXORA on X" class="icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+          <a href="https://github.com/chaitanyaNadipena"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="GitHub"
+   class="icon-btn">
+
+<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2.17c-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.69.08-.69 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.97.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.8 1.18 1.83 1.18 3.08 0 4.41-2.7 5.39-5.27 5.67.42.36.78 1.08.78 2.18v3.24c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+</svg>
+
+</a>
+          <a href="https://www.linkedin.com/in/nadipena-chaitanya-585892417/"
+target="_blank"
+rel="noopener noreferrer" aria-label="NEXORA on LinkedIn" class="icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v5M8 8v.01M12 16v-3a2 2 0 0 1 4 0v3M12 13v3"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Categories</h4>
+        <a href="products.html?category=laptops">Laptops</a>
+        <a href="products.html?category=smartphones">Smartphones</a>
+        <a href="products.html?category=watches">Smart Watches</a>
+        <a href="products.html?category=audio">Headphones</a>
+        <a href="products.html?category=gaming">Gaming Accessories</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@nexora.com">chaitanyanadipena@gmail.com</a>
+        <a href="tel:+18005551234">+91 8074716016</a>
+        <p class="footer__address">Eluru, Andhra Pradesh, India</p>
+      </div>
+
+      <div class="footer__col footer__col--newsletter">
+        <h4>Newsletter</h4>
+        <p>Product drops, once a week, zero spam.</p>
+        <form class="footer__newsletter-form" id="footerNewsletterForm">
+          <label for="footerEmail" class="sr-only">Email address</label>
+          <input type="email" id="footerEmail" placeholder="you@email.com" required />
+          <button type="submit" aria-label="Subscribe">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© 2026 NEXORA. All Rights Reserved. Designed &amp; Developed by Chaitanya Nadipena.</p>
+      <div class="footer__legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

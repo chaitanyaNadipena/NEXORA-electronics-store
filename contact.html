@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Contact — NEXORA | Get in Touch</title>
+  <meta name="description" content="Contact the NEXORA team — email, phone, our San Francisco address, and a direct message form for orders, support, and press." />
+  <meta name="keywords" content="NEXORA contact, customer support, email, phone, address" />
+  <meta name="author" content="Chaitanya Nadipena" />
+  <meta name="theme-color" content="#000000" />
+
+  <meta property="og:title" content="Contact — NEXORA" />
+  <meta property="og:description" content="Get in touch with the NEXORA team." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Cpath d='M28 72V28h9.6L61 56.4V28h9.6v44H61L37.6 43.4V72z' fill='%23fff'/%3E%3C/svg%3E" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <span class="loader__bracket">[</span>
+      <span class="loader__word">NEXORA</span>
+      <span class="loader__bracket">]</span>
+    </div>
+    <div class="loader__bar"><span class="loader__bar-fill" id="loaderFill"></span></div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="siteNav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo" aria-label="NEXORA home">
+        <span class="nav__logo-mark">N</span>
+        <span class="nav__logo-text">NEXORA</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="products.html" class="nav__link">Products</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="contact.html" class="nav__link is-active">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Open search" aria-expanded="false" aria-controls="searchPanel">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="icon-btn" id="cartToggle" aria-label="Open cart" aria-expanded="false" aria-controls="cartPanel">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3h2l.4 2M7 13h10l3-8H5.4M7 13 5.4 5M7 13l-1.7 6.6A1 1 0 0 0 6.3 21H18"/><circle cx="9" cy="21" r="1"/><circle cx="17" cy="21" r="1"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-panel" id="searchPanel">
+      <div class="container search-panel__inner">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="navSearchInput" placeholder="Search laptops, phones, watches, audio…" aria-label="Search products" />
+        <button class="icon-btn" id="searchClose" aria-label="Close search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <nav aria-label="Mobile Primary">
+      <a href="index.html" class="mobile-menu__link">Home</a>
+      <a href="products.html" class="mobile-menu__link">Products</a>
+      <a href="about.html" class="mobile-menu__link">About</a>
+      <a href="contact.html" class="mobile-menu__link is-active">Contact</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <p>Premium Tech. Minimal Experience.</p>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
+    <div class="cart-panel__head">
+      <h2>Your Cart</h2>
+      <button class="icon-btn" id="cartClose" aria-label="Close cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="cart-panel__items" id="cartItems">
+      <p class="cart-empty">Your cart is empty. Explore the <a href="products.html">catalog</a> to add something premium.</p>
+    </div>
+    <div class="cart-panel__footer">
+      <div class="cart-panel__total">
+        <span>Subtotal</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="btn btn--primary btn--block" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <main id="main">
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Contact</span>
+        </div>
+        <p class="eyebrow">Get In Touch</p>
+        <h1>We read every message.</h1>
+        <p>Questions about an order, a product spec, or a partnership — reach the NEXORA team directly below.</p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section">
+      <div class="container contact-grid">
+
+        <div class="contact-info reveal">
+          <div class="contact-info__item">
+            <div class="feature-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </div>
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:chaitanyanadipena@gmail.com">chaitanyanadipena@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <div class="feature-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            </div>
+            <div>
+              <h3>Phone</h3>
+              <a href="tel:+918074716016">+91 8074716016</a>
+              <span class="contact-info__note">Mon–Fri, 8am–7pm PT</span>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <div class="feature-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h3>Address</h3>
+              <p>Eluru, Andhra Pradesh, India</p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <div class="feature-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <div>
+              <h3>Support Response</h3>
+              <p>Average reply time under 4 business hours.</p>
+            </div>
+          </div>
+
+          <div class="contact-info__social">
+            <h3>Follow NEXORA</h3>
+            <div class="footer__social">
+              <a href="#" aria-label="NEXORA on Instagram" class="icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+              <a href="#" aria-label="NEXORA on X" class="icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+              <a href="https://github.com/chaitanyaNadipena" target="_blank" rel="noopener noreferrer" aria-label="NEXORA on GitHub" class="icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2-.2 4.5-1 4.5-4.5a3.5 3.5 0 0 0-1-2.5 3.3 3.3 0 0 0-.1-2.5s-.8-.3-2.9 1a10 10 0 0 0-5 0c-2-1.3-2.9-1-2.9-1a3.3 3.3 0 0 0-.1 2.5 3.5 3.5 0 0 0-1 2.5c0 3.5 2.5 4.3 4.5 4.5-.6.6-.6 1.2-.5 2V19"/></svg></a>
+              <a href="https://www.linkedin.com/in/nadipena-chaitanya-585892417/" target="_blank" rel="noopener noreferrer" aria-label="NEXORA on LinkedIn" class="icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v5M8 8v.01M12 16v-3a2 2 0 0 1 4 0v3M12 13v3"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="cf-name">Full name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Jordan Avery" required />
+                <span class="field__error">Please enter your name.</span>
+              </div>
+              <div class="field">
+                <label for="cf-email">Email address</label>
+                <input type="email" id="cf-email" name="email" placeholder="you@email.com" required />
+                <span class="field__error">Please enter a valid email.</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="cf-phone">Phone <span>(optional)</span></label>
+                <input type="tel" id="cf-phone" name="phone" placeholder="+1 (555) 000-0000" />
+              </div>
+              <div class="field">
+                <label for="cf-subject">Subject</label>
+                <select id="cf-subject" name="subject" required>
+                  <option value="" disabled selected>Choose a topic</option>
+                  <option value="order">Order Support</option>
+                  <option value="product">Product Question</option>
+                  <option value="warranty">Warranty Claim</option>
+                  <option value="press">Press / Partnerships</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="6" placeholder="Tell us how we can help…" required></textarea>
+              <span class="field__error">Please enter a message.</span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block">
+              <span>Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+
+            <p class="contact-form__status" id="contactFormStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ MAP ============ -->
+    <section class="section section--muted">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Find Us</p>
+          <h2 class="section__title">Visit Our Office</h2>
+        </div>
+
+        <div class="map-placeholder reveal" role="img" aria-label="Map showing NEXORA India office in Eluru, Andhra Pradesh, India">
+          <div class="map-placeholder__grid" aria-hidden="true"></div>
+          <div class="map-placeholder__pin">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="map-placeholder__label">
+            <strong>NEXORA India</strong>
+            <span>Eluru, Andhra Pradesh, India</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="icon-btn modal-close" id="modalClose" aria-label="Close product details">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="product-modal__body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo">
+          <span class="nav__logo-mark">N</span>
+          <span class="nav__logo-text">NEXORA</span>
+        </a>
+        <p>Premium Tech. Minimal Experience.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="NEXORA on Instagram" class="icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="NEXORA on X" class="icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+          <a href="https://github.com/chaitanyaNadipena"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="GitHub"
+   class="icon-btn">
+
+<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2.17c-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.69.08-.69 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.97.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.8 1.18 1.83 1.18 3.08 0 4.41-2.7 5.39-5.27 5.67.42.36.78 1.08.78 2.18v3.24c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+</svg>
+
+</a>
+          <a href="https://www.linkedin.com/in/nadipena-chaitanya-585892417/"
+target="_blank"
+rel="noopener noreferrer"" aria-label="NEXORA on LinkedIn" class="icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v5M8 8v.01M12 16v-3a2 2 0 0 1 4 0v3M12 13v3"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Categories</h4>
+        <a href="products.html?category=laptops">Laptops</a>
+        <a href="products.html?category=smartphones">Smartphones</a>
+        <a href="products.html?category=watches">Smart Watches</a>
+        <a href="products.html?category=audio">Headphones</a>
+        <a href="products.html?category=gaming">Gaming Accessories</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@nexora.com">chaitanyanadipena@gmail.com</a>
+        <a href="tel:+18005551234">+91 8074716016</a>
+        <p class="footer__address">Eluru, Andhra Pradesh, India</p>
+      </div>
+
+      <div class="footer__col footer__col--newsletter">
+        <h4>Newsletter</h4>
+        <p>Product drops, once a week, zero spam.</p>
+        <form class="footer__newsletter-form" id="footerNewsletterForm">
+          <label for="footerEmail" class="sr-only">Email address</label>
+          <input type="email" id="footerEmail" placeholder="you@email.com" required />
+          <button type="submit" aria-label="Subscribe">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© 2026 NEXORA. All Rights Reserved. Designed &amp; Developed by Chaitanya Nadipena.</p>
+      <div class="footer__legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+  <script src="js/contact.js" defer></script>
+</body>
+</html>
