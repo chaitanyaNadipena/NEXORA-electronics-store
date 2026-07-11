@@ -15,7 +15,7 @@ NEXORA is a premium electronics product catalog built as a full-stack front-end 
 After deployment, update the link below:
 
 ```
-https://your-live-demo-link
+https://chaitanyanadipena.github.io/NEXORA-electronics-store/
 ```
 
 ---
