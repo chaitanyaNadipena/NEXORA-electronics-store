@@ -2,160 +2,299 @@
 
 **Premium Tech. Minimal Experience.**
 
-NEXORA is a premium electronics product catalog built as a full-stack front-end capstone project — a minimal, luxury-tech-brand shopping experience with a real product catalog, live search and filtering, a persistent shopping cart, and a fully validated contact form. Built entirely with vanilla HTML5, CSS3, and JavaScript ES6 — no frameworks, no build step, no dependencies.
+NEXORA is a premium electronics product catalog built as a full-stack front-end capstone project — a minimal, luxury-tech-brand shopping experience with a real product catalog, live search and filtering, a persistent shopping cart, and a fully validated contact form. Built entirely with vanilla HTML5, CSS3, and JavaScript (ES6+) without frameworks, build tools, or external dependencies.
 
 > Designed & Developed by **Chaitanya Nadipena**
 
 ---
 
-## Overview
+# 🌐 Live Demo
 
-NEXORA showcases 32 curated electronics products across eight categories — laptops, smartphones, smart watches, headphones, speakers, gaming accessories, monitors, and cameras — presented in a black, glass, and white "premium technology brand" aesthetic. The project demonstrates production-level front-end engineering: semantic and accessible markup, a scalable CSS design system driven by custom properties, and modular JavaScript with no external UI libraries.
+> **Coming Soon**
 
-Live demo pages: `index.html` · `products.html` · `about.html` · `contact.html`
-
----
-
-## Features
-
-**Design & UX**
-- Custom black / dark-gray / glass design system (CSS custom properties)
-- Fully mobile-first, responsive from small phones to desktop monitors
-- Branded loading screen with animated progress bar
-- Navbar blur-on-scroll, smooth scroll, scroll-reveal animations (IntersectionObserver)
-- Animated statistics counters, floating hero visuals, marquee strip
-- Accessible: semantic HTML5, skip link, ARIA attributes, visible focus states, `prefers-reduced-motion` support
-
-**Shopping Experience**
-- Full product catalog (32 products / 8 categories) with ratings, badges, and pricing
-- Live search with debounced input, category filter chips, and sorting (featured / price / rating)
-- Product quick-view modal with full specs and add-to-cart
-- Persistent shopping cart (localStorage-backed) with quantity controls, running subtotal, and a slide-out drawer
-- Graceful image-fallback system — any broken product photo renders a themed placeholder instead of a broken-image icon
-
-**Other Pages**
-- **About** — company story, mission & vision, core values, "why choose us," animated achievement stats, and a milestone timeline
-- **Contact** — contact details, a fully validated contact form (inline errors, focus-on-error, success state), social links, and a CSS-drawn map placeholder
-- Newsletter subscription forms (hero section and footer)
-- FAQ accordion, toast notifications, back-to-top button
-
----
-
-## Folder Structure
+After deployment, update the link below:
 
 ```
+https://your-live-demo-link
+```
+
+---
+
+## Overview
+
+NEXORA showcases 32 curated electronics products across eight categories — laptops, smartphones, smartwatches, headphones, speakers, gaming accessories, monitors, and cameras — presented in a premium black, glass, and white luxury-tech aesthetic.
+
+The project demonstrates production-level front-end engineering using semantic HTML5, modern CSS architecture, responsive layouts, modular JavaScript, smooth animations, and reusable UI components.
+
+### Available Pages
+
+- Home (`index.html`)
+- Products (`products.html`)
+- About (`about.html`)
+- Contact (`contact.html`)
+
+---
+
+# ✨ Features
+
+## 🎨 Premium Design & User Experience
+
+- Luxury black & glass UI
+- Fully responsive (Mobile, Tablet & Desktop)
+- Animated loading screen
+- Glassmorphism navigation bar
+- Smooth scrolling
+- Scroll reveal animations
+- Animated counters
+- Floating hero animations
+- Marquee announcement strip
+- Accessible HTML5 structure
+- ARIA labels
+- Keyboard navigation
+- Reduced Motion support
+
+---
+
+## 🛍 Shopping Experience
+
+- 32 premium electronics products
+- 8 product categories
+- Product badges
+- Ratings
+- Search with live filtering
+- Category filters
+- Sorting options
+- Product Quick View modal
+- Add to Cart UI
+- Persistent Shopping Cart using LocalStorage
+- Quantity controls
+- Dynamic subtotal
+- Premium image fallback system
+
+---
+
+## 📄 Other Pages
+
+### About
+
+- Company Story
+- Mission & Vision
+- Core Values
+- Why Choose Us
+- Timeline
+- Achievement Statistics
+
+### Contact
+
+- Contact Details
+- Contact Form Validation
+- Inline Error Messages
+- Success Notification
+- Interactive Map
+- Social Links
+
+### Extra Sections
+
+- Newsletter
+- Customer Reviews
+- FAQ
+- Toast Notifications
+- Back to Top Button
+
+---
+
+# 📂 Folder Structure
+
+```text
 NEXORA-STORE/
-├── index.html          # Homepage
-├── products.html        # Full product catalog with search & filters
-├── about.html            # Company story, mission, values, achievements
-├── contact.html          # Contact form, info, and map
+│
+├── index.html
+├── products.html
+├── about.html
+├── contact.html
+│
 ├── css/
-│   └── style.css         # Complete design system & all component styles
+│   └── style.css
+│
 ├── js/
-│   ├── app.js             # Core engine: nav, cart, loader, accordion, animations
-│   ├── products.js        # Product data, catalog rendering, search/filter, modal
-│   └── contact.js         # Contact form validation
+│   ├── app.js
+│   ├── products.js
+│   └── contact.js
+│
 ├── assets/
-│   ├── images/            # (reserved for local image assets)
-│   └── icons/              # (reserved for local icon assets)
+│   ├── images/
+│   └── icons/
+│
 └── README.md
 ```
 
 ---
 
-## Technologies Used
+# 🛠 Technologies Used
 
-- **HTML5** — semantic, accessible markup
-- **CSS3** — custom properties, Grid, Flexbox, animations, no preprocessor
-- **JavaScript (ES6+)** — vanilla, modular, no frameworks
-- **Web APIs** — `localStorage`, `IntersectionObserver`, `URLSearchParams`
-- **Google Fonts** — Space Grotesk (display) + Inter (body)
-- No Bootstrap, no Tailwind, no React/Vue, no build tools required
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- LocalStorage API
+- IntersectionObserver API
+- URLSearchParams API
+- Google Fonts (Space Grotesk & Inter)
+
+### No Frameworks Used
+
+- ❌ Bootstrap
+- ❌ Tailwind CSS
+- ❌ React
+- ❌ Vue
+- ❌ Angular
 
 ---
 
-## Installation
+# 🚀 Installation
 
-No build step or package manager required.
+Clone the repository:
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/chaitanyaNadipena/nexora-store.git
-
-# 2. Move into the project folder
-cd nexora-store
-
-# 3. Open index.html directly in a browser, or serve it locally:
-npx serve .
-# or
-python3 -m http.server 8080
+git clone https://github.com/chaitanyaNadipena/NEXORA-electronics-store.git
 ```
 
-Then visit `http://localhost:8080` (or open `index.html` directly).
+Move into the project folder:
+
+```bash
+cd NEXORA-electronics-store
+```
+
+Run the project using **VS Code Live Server** (Recommended).
+
+You can also open `index.html` directly in your browser.
 
 ---
 
-## Deployment
+# 🚀 Deployment
 
-NEXORA is a fully static site and deploys as-is to any static host:
+NEXORA is a fully static website and can be deployed to any modern hosting platform.
 
-**GitHub Pages**
-1. Push the repository to GitHub
-2. Go to **Settings → Pages**
-3. Set the source branch to `main` and folder to `/root`
-4. Save — your site will be live at `https://<username>.github.io/<repo-name>/`
+## GitHub Pages
 
-**Netlify**
-1. Drag and drop the `NEXORA-STORE` folder into [Netlify Drop](https://app.netlify.com/drop), or connect the GitHub repo
-2. No build command needed — publish directory is the project root
+1. Push the repository to GitHub.
+2. Open **Settings → Pages**.
+3. Under **Source**, select:
+   - **Branch:** `main`
+   - **Folder:** `/ (root)`
+4. Save the changes.
 
-**Vercel**
-1. Import the GitHub repository at [vercel.com/new](https://vercel.com/new)
-2. Framework preset: **Other** — no build command required
-3. Deploy
-
----
-
-## Future Improvements
-
-- Backend integration for real checkout, order history, and payments
-- User accounts, wishlists, and saved carts across devices
-- Real embedded map (Google Maps / Mapbox) in place of the CSS placeholder
-- Product reviews submission and moderation
-- CMS-driven product data instead of the static JavaScript array
-- Automated testing (unit tests for cart logic, E2E tests for user flows)
-- Image optimization pipeline and a CDN for product photography
-
----
-
-## License
-
-This project is released under the **MIT License**.
+Your website will be available at:
 
 ```
-MIT License
-
-Copyright (c) 2026 Chaitanya Nadipena
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+https://your-username.github.io/NEXORA-electronics-store/
 ```
 
 ---
 
-**© 2026 NEXORA.** All Rights Reserved. Designed & Developed by [Chaitanya Nadipena](https://github.com/chaitanyaNadipena).
+## Netlify
+
+1. Go to Netlify.
+2. Drag and drop the **NEXORA-STORE** folder.
+3. No build command is required.
+4. Publish the site.
+
+---
+
+## Vercel
+
+1. Import the GitHub repository.
+2. Framework Preset: **Other**
+3. No build command required.
+4. Deploy.
+
+---
+
+# 📈 Future Improvements
+
+- Secure user authentication
+- Wishlist functionality
+- Order history
+- Payment gateway integration
+- Backend database integration
+- Product review system
+- Admin dashboard
+- CMS integration
+- Product image optimization
+- Performance improvements
+- SEO enhancements
+- Progressive Web App (PWA)
+- Dark / Light theme switcher
+
+---
+
+# 📸 Screenshots
+
+> Add screenshots of your website after deployment.
+
+Example:
+
+```
+assets/screenshots/homepage.png
+assets/screenshots/products.png
+assets/screenshots/contact.png
+```
+
+---
+
+# 🤝 Contributing
+
+Contributions, suggestions, and improvements are always welcome.
+
+Feel free to fork the repository, create a new branch, and submit a Pull Request.
+
+---
+
+# 👨‍💻 Developer
+
+**Chaitanya Nadipena**
+
+B.Tech – Computer Science & Engineering (AI & DS)
+
+Sir C. R. Reddy College of Engineering
+
+📧 Email
+
+chaitanyanadipena@gmail.com
+
+📱 Phone
+
++91 8074716016
+
+📍 Location
+
+Eluru, Andhra Pradesh, India
+
+🔗 GitHub
+
+https://github.com/chaitanyaNadipena
+
+💼 LinkedIn
+
+https://www.linkedin.com/in/nadipena-chaitanya-585892417/
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, consider giving it a **Star ⭐** on GitHub.
+
+It helps support my work and motivates me to build more professional projects.
+
+---
+
+## 📄 Project Status
+
+✅ Completed
+
+This project was developed as part of a **Web Development Internship Capstone Project** and demonstrates modern front-end development practices using HTML5, CSS3, and JavaScript.
+
+---
+
+**© 2026 NEXORA. All Rights Reserved.**
+
+Designed & Developed with ❤️ by **Chaitanya Nadipena**
